@@ -1,0 +1,278 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="keywords" content="shoes,bag,foodstuff,wristwatch,accessories,machines,camera,gown,wedding,kitchen">
+        <meta name="description" content="A website to buy Everything you Need...">
+        <meta name="author" content="Emmawhyte">
+        <link rel="stylesheet" href="/static/style.css" />
+        <link rel="stylesheet" href="/static/animate.min.css" />
+        <script src="/static/jquery-3.7.1.min.js"></script>
+
+        <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css" />
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+
+        <title>{{title}}</title>
+        
+    </head>
+    <body>
+       
+     
+        <div class="container main">
+            <!-- start_navbar -->
+            {% block navbar %}
+            <div class="row mt-1">
+            <div class="col">
+                
+            <nav id="mainNav" class="navbar navbar-expand-md sticky-top py-3 mb-2 navbar-white">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="">
+                <span class="text-danger bord logoo"><b>𝑨𝒇𝒇𝒐𝒓𝒅𝒂𝒃𝒍𝒆 𝑳𝒖𝒙𝒖𝒓𝒚</b></span></a>
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1">
+                    <span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span>
+                </button>
+                
+               
+                
+                            
+                <div id="navcol-1" class="collapse navbar-collapse">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link active text-danger " href="{{url_for('landing')}}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-danger" href="{{url_for('category')}}">Category</a></li>
+                        <li class="nav-item"><a class="nav-link text-danger" href="{{url_for('product')}}">Products</a></li>
+                        <li class="nav-item"><a class="nav-link text-danger" href="{{url_for('about')}}">Blogs</a></li>
+                    </ul>
+                    
+                    
+                         <a href="{{url_for('cart')}}" class=" nav-link"><i class="fa fa-shopping-cart icon-class  cart1 m-3 ">
+                        <span class="badge badge-counter nav-link disabled text-bg-secondary counting rounded-pill num" id="click-count">{{session['Shoppingcart']|length}}</span></i> </a>
+                        
+                      
+                      <a class="btn btn-danger lgn shadow me-2 dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false" role="button" href=""> <i class="fa fa-user"></i></a>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                      <li><a class=" alert-danger shadow me-2 dropdown-item" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" href=""> <i class="fa fa-user"> &nbsp; profile</i></a></li>
+                      <li><a class=" alert-danger shadow me-2 dropdown-item"  href="{{url_for('logout')}}"> <i class="fa fa-sign-out"> &nbsp; Sign Out</i></a></li>
+                     </ul>   
+                
+                     
+                      
+                      
+               
+                    </div>
+                  
+                   
+                    
+                   
+            </div>
+            </nav>
+        
+            </div>
+            </div>
+            {% endblock navbar %}
+                </div>
+           
+    <!--navbar end-->
+
+
+
+
+    <!--hero section start-->
+    <!--advert start-->
+    {% block advert %}
+    
+    {% endblock advert %}
+    <!--advert end-->
+
+
+
+
+    {% block carousel %}
+    {% endblock carousel %}
+        <!--carousel1 end-->
+        </div>
+
+        
+    </div>
+
+
+
+    
+    <div class="col-10 col-md-6 col-xl-6">
+
+
+    {% block hero %}
+       
+    {% endblock hero %}
+    </div>
+
+    
+    {% block dashboard %}
+       
+    {% endblock dashboard %}
+
+    <!--hero section end-->
+    {% block goods %}
+
+    {% endblock goods %}
+    
+
+    {% block foodstuff %}
+      
+    {% endblock foodstuff %}
+
+    {% block body %}
+
+    {% endblock body %}
+    <!--footer-->
+
+    {% block footer %}
+    <div class="container">
+        <footer class="bg-dark text-light py-4 ">
+            <div class="container">
+                <div class="row">
+                <div class="col-md-4 text-center">
+                    <h5>Contact Us</h5>
+                    <p>Email: info@example.com</p>
+                    <p>Phone: 123-456-7890</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h5>Follow Us</h5>
+                    <p>Facebook</p>
+                    <p>Twitter</p>
+                    <p>Instagram </p> 
+                </div>
+                <div class="col-md-4 text-center">
+                    <h5>Information</h5>
+                    <p>About Us</p>
+                    <p>Privacy Policy</p>
+                    <p>Terms & Conditions</p>
+                </div>
+        
+                </div>
+                <div class="row bottom">
+                <div class="col text-light d-flex justify-content-center mb-2 align-items-center pt-3">
+                <p class="mb-0">Copyright © 2024 Brand</p>
+                </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    {% endblock footer %}
+
+
+    <!--footer end-->
+    <div class="row">
+    <div class="col">
+        <a href="#" class="arrow"><i><img src="/static/clothes/up-arrow.png" alt="" width="30px"></i></a>
+
+    </div>
+    </div>
+
+
+    <!--modal start for cart-->
+
+
+    <!-- Modal -->
+    {% block modal %}
+  
+    {% endblock %}
+
+    <!--modal end-->
+{% block modal2 %}
+{% endblock modal2 %}
+    <!--offcanvas start-->
+        
+    {% block offcanvas %}
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"><span class="text-danger bord logoo"><b>𝑨𝒇𝒇𝒐𝒓𝒅𝒂𝒃𝒍𝒆 𝑳𝒖𝒙𝒖𝒓𝒚</b></span></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+        <!---->
+        <div class=" text-center mt-2">
+            <a href="#" class="d-block link-dark "  >
+              <i class="fa fa-user-circle ss"> &nbsp; My Profile</i>
+            </a>
+        </div>
+        <hr>
+        <!---->
+        <div class="card-body">
+            <p class="card-title"><a href="{{url_for('dash')}}" class="ss "> <i class="fa fa-dashboard ss"> &nbsp; DashBoard</i></a></p>
+            <p class="card-title"><a href="" class="ss"> <i class="fa fa-globe ss"> &nbsp;Track Order </i></a></p>
+            <p class="card-title"><a href=""><i class="fa fa-envelope ss">&nbsp; Inbox</i></a></p>
+            <p class="card-title"><a href="" class="ss"> <i class="fa fa-credit-card ss"> &nbsp; Payments</i></a></p>
+            <p class="card-title"><a href="" class="ss"> <i class="fa fa-sign-out ss"> &nbsp; Logout</i></a></p>
+  
+        </div>
+
+        <!---->
+        </div>
+    </div>
+    
+    <!--offcanvas end-->
+    </div>
+    {% endblock %}
+
+        <script src="/static/index.js"></script>
+        <script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#staticBackdrop').modal('show');
+
+                $('#staticBackdrop').on('hide.bs.modal',function(){
+                    window.history.back();
+                });
+
+////////////////////////////////////////////
+                $('#exampleModal').modal('show');
+
+                $('#exampleModal').on('hide.bs.modal',function(){
+                    window.history.back();
+                });
+
+////////////////////////////////////////////
+                $('#dpModal').modal('show');
+
+                $('#dpModal').on('hide.bs.modal',function(){
+                    window.history.back();
+                });
+/////////////////////Add to cart/////////////////////////
+                $('.delivery1').click(
+                    function(){
+                    $('#delivery').toggle()
+                }
+                )
+
+///////////////////////goto products pages onclick////////////////////////////////////////
+$('#clothes').on('click', function() {
+  var sessionId = 'clothes1'; // replace with the actual session ID
+  window.location.href = '/category/?session_id=' + clothes1;
+});
+$('#shoes').on('click', function() {
+  var sessionId = 'shoe1'; // replace with the actual session ID
+  window.location.href = '/category/?session_id=' + shoes1;
+});
+$('#accessories').on('click', function() {
+  var sessionId = 'accessories1'; // replace with the actual session ID
+  window.location.href = '/category/?session_id=' + accessories1;
+});
+
+
+
+        });
+    </script>
+
+    </body>
+    </html>
+
+    

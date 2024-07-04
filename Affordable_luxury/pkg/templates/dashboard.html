@@ -1,0 +1,270 @@
+{% extends 'base.html' %}
+
+<!--dashboard sect-->
+
+{% block body %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 dash">
+      <div class="card text-center dtext">
+        <div class="card-header">
+          <h3 class="dash1">My Luxury Account</h3>
+        </div>
+        <!--profile-->
+        <div class="dropdown text-center mt-2">
+          <a
+            href="#"
+            class="d-block link-dark text-decoration-none dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+         
+          <img
+          src="/static/products/{% if customer.cust_pix %}{{customer.cust_pix}}{% else %}avatar.jpg{% endif %}"
+          alt="mdo"
+          width="50"
+          height="50"
+          class="rounded-circle"
+          />
+          </a>
+          <ul class="dropdown-menu text-small">
+            <li>
+              <a class="dropdown-item dash2" href="{{url_for('dp')}}">Upload DP</a>
+            </li>
+            <li><a class="dropdown-item dash2" href="#">Settings</a></li>
+
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a class="dropdown-item dash2" href="{{url_for('logout')}}"
+                >Sign out</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!---->
+        <div class="card-body">
+          <p class="card-title">
+            <a href="" class="ss">
+              <i class="fa fa-shopping-bag ss"> &nbsp; Orders</i></a
+            >
+          </p>
+
+          <p class="card-title">
+            <a href=""><i class="fa fa-envelope ss">&nbsp; Inbox</i></a>
+          </p>
+
+          <div class="row">
+            <div class="col-md-12">
+              <hr />
+            </div>
+
+            <!-- Button trigger modal -->
+            <button
+              type="button"
+              class="btn lgn gradient"
+              style="color: white"
+              data-bs-toggle="modal"
+              data-bs-target="#edit"
+            >
+              Edit Profile
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--right part start-->
+    <!-- <div class="row"> -->
+    <div class="col-md-9 mb-1">
+      <div class="card text-center dtext">
+        <div class="card-header">
+          <h3 class="dash1">Account OverView</h3>
+        </div>
+        <div class="card-body mb-2">
+          <!--internal body start-->
+
+          <!-- <div class="col-md-8 dash"> -->
+          <div class="container">
+            <div class="row mb-3 ">
+              <div class="col-md-6">
+                <div class="card text-center dtext">
+                  <div class="card-header">
+                    <h3 class="dash1">Account Details</h3>
+                  </div>
+                  <div class="card-body">
+                    <br />
+                    <p class="card-title">
+                      <b> {{customer.cust_lname}} {{customer.cust_fname}}</b>
+                    </p>
+
+                    <p class="card-title"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mt-1">
+                <div class="card text-center dtext">
+                  <div class="card-header">
+                    <h3 class="dash1">Address</h3>
+                  </div>
+                  <div class="card-body">
+                    <br>
+                    <p class="card-title"><b>{{customer.cust_address}}</b></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!---->
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card text-center dtext">
+                  <div class="card-header">
+                    <h3 class="dash1">Email Address</h3>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-title">
+                      <br />
+                      <b> {{customer.cust_email}}</b> <br />
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-------->
+              <div class="col-md-6 mt-1">
+                <div class="card text-center dtext">
+                  <div class="card-header">
+                    <h3 class="dash1">Phone No:</h3>
+                  </div>
+                  <br />
+                  <div class="card-body">
+                    <p class="card-title"><b>{{customer.cust_phone}}</b></p>
+                  </div>
+                </div>
+              </div>
+              <!--................-->
+            </div>
+          </div>
+          <!-- </div> -->
+
+          <!--internal body ends-->
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+    <!--right part end-->
+  </div>
+</div>
+{% endblock %}
+<!--dashboard sect end-->
+
+{% block modal2 %}
+<!--modal for edit profile start-->
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="edit"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="editLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+          
+          <h1 class="modal-title fs-5" id="editLabel"> Edit Your Profile</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="content" style="background-color: white;">
+          {% set m = get_flashed_messages(with_categories=True) %} {% for cat,
+          msg in m %} {% if cat=='error' %}
+
+          <div class="alert alert-danger">{{msg}}</div>
+
+          {% else %}
+          <div class="alert alert-success">{{msg}}</div>
+          {% endif %} {% endfor %}
+
+          <form enctype="multipart/form-data" method="post" action="/profile/">
+            <input type="hidden" name="csrf_token" value="{{csrf_token()}}" />
+
+            <div class="form-group row">
+              <div class="col-md-6 mb-3">
+                <label for="fname">FirstName</label>
+                <input
+                  class="form-control border-dark noround"
+                  id="fname"
+                  name="fname"
+                  required
+                  type="text"
+                  value="{{customer.cust_fname}}"
+                />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lname">LastName</label>
+                <input
+                  class="form-control border-dark noround"
+                  id="lname"
+                  name="lname"
+                  required
+                  type="text"
+                  value="{{customer.cust_lname}}"
+                />
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-md-6 mb-3">
+                <label for="phone">Phone</label>
+                <input
+                  class="form-control border-dark noround"
+                  id="phone"
+                  name="phone"
+                  required
+                  type="text"
+                  value="{{customer.cust_phone}}"
+                />
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <label for="phone">Address</label>
+                <input
+                  class="form-control border-dark noround"
+                  id="address"
+                  name="address"
+                  required
+                  type="text"
+                  value="{{customer.cust_address}}"
+                />
+              </div>
+            </div>
+
+           
+            <!-- <hr /> -->
+
+          
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                Close
+              </button>
+              <button type="submit" class="btn btn-primary">Update Profile</button>
+            </div>
+          </form>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+{% endblock modal2 %}
+
+<!--modal for edit profile end-->

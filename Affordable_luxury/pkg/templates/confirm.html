@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block goods %}
+<div class="container">
+    
+<div class="content">
+    <h3>Payment Confirmation</h3>
+    <p class="alert alert-info w-80 "> You have choosen to make payments: <br> Please click on the Confirm Payment button when you are done.
+      Your reference number is <u>{{ payment_deets.payment_ref}}</u>
+  
+  </p>
+    <div class="mb-3"> <label>Fullname:</label> {{ payment_deets.payment_cust.cust_fname}}-{{ payment_deets.payment_cust.cust_lname}} </div>
+    <div class="mb-3"> <label>Email:</label> {{ payment_deets.payment_cust.cust_email}} </div>
+    <div class="mb-3"> <label>Amount:</label> <b>₦</b> {{ payment_deets.amount_paid}} </div>
+    
+   <form method="post" action="/paystack/initialize/">
+       <p>
+           <input type="hidden" name="csrf_token" value="{{ csrf_token ()}}">
+           <a class="btn btn-secondary noround" type="button" href='/landing/'> Cancel Payment </a>
+           <a href="/paystack/initialize/" class="btn gradient noround" type="submit"> Confirm Payment </a>
+        </p>
+    </form>
+    
+</div>
+</div>
+{% endblock %}
+
+   {% block advert %}
+{% endblock %}
+
+{% block carousel %}
+{% endblock %}
+
+{% block hero %}
+{% endblock %}
+
+
+{% block dashboard %}
+       
+{% endblock %}
+
+{% block foodstuff %}
+{% endblock %}
+
+
+ {% block footer %}
+{% endblock %}
+
+
+{% block modal %}
+{% endblock %}
+
+ {% block offcanvas %}
+{% endblock %}
+

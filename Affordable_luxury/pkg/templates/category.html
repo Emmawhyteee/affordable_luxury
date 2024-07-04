@@ -1,0 +1,203 @@
+{% extends 'base.html' %}
+
+
+{% block goods %}
+<!--clothes start-->
+<div class="container">
+    <div class="container">
+        <div class="text-center" id="clothes1"><b>Clothes Section</b></div>
+        <div class="row gradient py-2 row-cols-md-2 row-cols-xl-4  mb-1">
+            
+            {% for product in products %}
+            {% if product.prod_catid==1 %}
+            
+                 
+            <div class=" px-1 mt-2 ">
+                <div class="card" style="width: 17rem;">
+    
+                    <img src="/static/products/{{product.prod_image}}/" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">{{product.prod_title}}</h5>
+                    <p class="card-text text-secondary fw-30"><sup>₦</sup>{{product.prod_price}}</p>
+                    </div>
+                    <form action="{{url_for('addcart')}}" method="post">
+                        <input type="hidden" name="csrf_token" value="{{csrf_token()}}" >
+                        <input type="hidden" name="product_id" value="{{product.prod_id}}" >
+                    <div class="card-footer d-flex justify-content-between">
+                        <p><a href="{{url_for('details',id=product.prod_id)}}" class="float-left btn btn-sm btn-warning me-1">Details</a></p>
+                       <p> <button type="submit" class="float-right btn btn-sm btn-danger me-5"><i class="fa fa-shopping-cart  add_cart cart1" id="add-to-cart"></i></button></p>
+                        <label for="">Qty:&nbsp;</label>
+                        <input type="number" name="quantity" id="" value="1" min="1" max="product.products" class="form-control w-18">
+                    </div>
+                </form>
+                </div>
+            </div>
+                    {% endif %}
+                {% endfor %}
+            
+    
+        </div>
+    </div>
+    <!--clothes end------------------------------------------------------------>
+    
+    
+    <!--accessories start-->
+    
+    <div class="container">
+        <div class="text-center" id="accessories1"><b>Accessories Section</b></div>
+        <div class="row gradient py-2 row-cols-md-2 row-cols-xl-4  mb-1">
+            
+            {% for product in products %}
+            {% if product.prod_catid==2 %}
+                
+            <div class="col-10 px-1 mt-2 ">
+                <div class="card" style="width: 17rem;">
+    
+                    <img src="/static/products/{{product.prod_image}}/" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">{{product.prod_title}}</h5>
+                    <p class="card-text text-secondary fw-30"><sup>₦</sup>{{product.prod_price}}</p>
+                    </div>
+                    <form action="{{url_for('addcart')}}" method="post">
+                        <input type="hidden" name="csrf_token" value="{{csrf_token()}}" >
+                        <input type="hidden" name="product_id" value="{{product.prod_id}}" >
+                    <div class="card-footer d-flex justify-content-between">
+                        <p><a href="{{url_for('details',id=product.prod_id)}}" class="float-left btn btn-sm btn-warning me-1">Details</a></p>
+                       <p> <button type="submit" class="float-right btn btn-sm btn-danger me-5"><i class="fa fa-shopping-cart  add_cart cart1" id="add-to-cart"></i></button></p>
+                        <label for="">Qty:&nbsp;</label>
+                        <input type="number" name="quantity" id="" value="1" min="1" max="product.products" class="form-control w-18">
+                    </div>
+                </form>
+                </div>
+            </div>
+                    {% endif %}
+                {% endfor %}
+            
+    
+        </div>
+    </div>
+    
+    <!--accessories end---------------------------------------------------------------------->
+    
+    <!--shoes start-->
+    <div class="container">
+        <div class="text-center" id="shoe1"><b>Shoes Section</b></div>
+    
+        <div class="row gradient py-2 row-cols-md-2 row-cols-xl-4  mb-1">
+            
+            {% for product in products %}
+            {% if product.prod_catid==3 %}
+                 
+            <div class=" px-1 mt-2 ">
+                <div class="card" style="width: 17rem;">
+    
+                    <img src="/static/products/{{product.prod_image}}/" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">{{product.prod_title}}</h5>
+                    <p class="card-text text-secondary fw-30"><sup>₦</sup>{{product.prod_price}}</p>
+                    </div>
+                    <form action="{{url_for('addcart')}}" method="post">
+                        <input type="hidden" name="csrf_token" value="{{csrf_token()}}" >
+                        <input type="hidden" name="product_id" value="{{product.prod_id}}" >
+                    <div class="card-footer d-flex justify-content-between">
+                        <p><a href="{{url_for('details',id=product.prod_id)}}" class="float-left btn btn-sm btn-warning me-1">Details</a></p>
+                       <p> <button type="submit" class="float-right btn btn-sm btn-danger me-5"><i class="fa fa-shopping-cart  add_cart cart1" id="add-to-cart"></i></button></p>
+                        <label for="">Qty:&nbsp;</label>
+                        <input type="number" name="quantity" id="" value="1" min="1" max="product.products" class="form-control w-18">
+                    </div>
+                </form>
+                </div>
+            </div>
+                    {% endif %}
+                {% endfor %}
+            
+    
+        </div>
+    </div>
+    
+    <!--shoes end---------------------------------------------------------------------------->
+    
+    
+    
+    <!--bags start-->
+    <div class="container">
+        <div class="text-center"><b>Bags Section</b></div>
+    
+        <div class="row gradient py-2 row-cols-md-2 row-cols-xl-4 mb-1 mb-1">
+            
+            {% for product in products %}
+            {% if product.prod_catid==5 %}
+                
+            <div class=" px-1 mt-2 ">
+                <div class="card" style="width: 17rem;">
+    
+                    <img src="/static/products/{{product.prod_image}}/" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">{{product.prod_title}}</h5>
+                    <p class="card-text text-secondary fw-30"><sup>₦</sup>{{product.prod_price}}</p>
+                    </div>
+                    <form action="{{url_for('addcart')}}" method="post">
+                        <input type="hidden" name="csrf_token" value="{{csrf_token()}}" >
+                        <input type="hidden" name="product_id" value="{{product.prod_id}}" >
+                    <div class="card-footer d-flex justify-content-between">
+                        <p><a href="{{url_for('details',id=product.prod_id)}}" class="float-left btn btn-sm btn-warning me-1">Details</a></p>
+                       <p> <button type="submit" class="float-right btn btn-sm btn-danger me-5"><i class="fa fa-shopping-cart  add_cart cart1" id="add-to-cart"></i></button></p>
+                        <label for="">Qty:&nbsp;</label>
+                        <input type="number" name="quantity" id="" value="1" min="1" max="product.products" class="form-control w-18">
+                    </div>
+                </form>
+                </div>
+            </div>
+                    {% endif %}
+                {% endfor %}
+            
+    
+        </div>
+    </div>
+    
+    
+    
+    <!--bags end--------------------------------------------------------------------------->
+    
+    
+    <!--foodstuff start-->
+    
+    <div class="container">
+        <div class="text-center"><b>Foodstuffs Section</b></div>
+    
+        <div class="row gradient py-2 row-cols-md-2 row-cols-xl-4  mb-1">
+            
+            {% for product in products %}
+            {% if product.prod_catid==4 %}
+                
+            <div class=" px-1 mt-2 ">
+                <div class="card" style="width: 17rem;">
+    
+                    <img src="/static/products/{{product.prod_image}}/" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">{{product.prod_title}}</h5>
+                    <p class="card-text text-secondary fw-30"><sup>₦</sup>{{product.prod_price}}</p>
+                </div>
+                    <form action="{{url_for('addcart')}}" method="post">
+                        <input type="hidden" name="csrf_token" value="{{csrf_token()}}" >
+                        <input type="hidden" name="product_id" value="{{product.prod_id}}" >
+                    <div class="card-footer d-flex justify-content-between">
+                        <p><a href="{{url_for('details',id=product.prod_id)}}" class="float-left btn btn-sm btn-warning me-1">Details</a></p>
+                        <p> <button type="submit" class="float-right btn btn-sm btn-danger me-5"><i class="fa fa-shopping-cart  add_cart cart1" id="add-to-cart"></i></button></p>
+                        <label for="">Qty:&nbsp;</label>
+                        <input type="number" name="quantity" id="" value="1" min="1" max="product.products" class="form-control w-18">
+                    </div>
+                </form>
+            </div>
+        </div>
+                    {% endif %}
+                {% endfor %}
+            
+    
+        </div>
+    </div>
+    <!--foodstuff end------------------------------------------------------------------------->
+    
+</div>
+
+{% endblock goods %}

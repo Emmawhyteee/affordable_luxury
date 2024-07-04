@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href="/static/animate.min.css" />
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>Login|page</title>
+  </head>
+  <body>
+
+    <div class="container main">
+ <!-- start_navbar -->
+ <div class="container main">
+  <!-- start_navbar -->
+ <div class="row">
+   <div class="col">
+     
+  <nav id="mainNav" class="navbar navbar-expand-md sticky-top py-3 mb-2 navbar-white">
+   <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="">
+     <!-- <span class="bs-icon-sm bs-icon-circle bs-icon-danger shadow d-flex justify-content-center align-items-center me-2 bs-icon"> -->
+     
+       
+    <span class="text-danger bord logoo"><b>𝑨𝒇𝒇𝒐𝒓𝒅𝒂𝒃𝒍𝒆 𝑳𝒖𝒙𝒖𝒓𝒚</b></span></span></a>
+              <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1">
+                <span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span>
+              </button>
+       <div id="navcol-1" class="collapse navbar-collapse">
+           <ul class="navbar-nav mx-auto">
+               <li class="nav-item"><a class="nav-link active text-danger" href="">Home</a></li>
+               <li class="nav-item"><a class="nav-link text-danger" href="">Category</a></li>
+               <li class="nav-item"><a class="nav-link text-danger" href="">Products</a></li>
+               <li class="nav-item"><a class="nav-link text-danger" href="">Blogs</a></li>
+               <li class="nav-item"><a class="nav-link text-danger" href="">Shops</a></li>
+           </ul>
+           <input type="search" class="searchh" placeholder="Search" />
+           <a href="#" class="me-2 nav-link">
+            <i class="fa fa-shopping-cart icon-class  cart1 m-3 " data-bs-toggle="modal" data-bs-target="#exampleModal">
+             <span class="badge badge-counter text-bg-secondary counting rounded-pill num">0</span>
+            </i> 
+           </a>
+           <a class="btn btn-danger lgn shadow me-2 " role="button" href="{{url_for('register')}}">Sign up</a>
+           <!-- <a class="btn btn-danger lgn shadow" role="button" href="login.html">Log In</a> -->
+       </div>
+   </div>
+ </nav>
+ 
+   </div>
+ </div>
+</div>
+
+<!--login sect-->
+
+<!-- <div class="row">
+    <div class="col col-md-10 col-lg-9 mx-auto mt-3 mb-5"> -->
+      <main class="form-signin w-100 m-auto">
+
+        <div class="container col-md-6 px-4 py-5" >
+
+
+<!--login sect end-->
+
+<!--login change-->
+ <h3 class="alert-tertiary text-center  ">Welcome Back!</h3>
+<form action="{{url_for('login')}}" method="post">   
+  <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
+  {% set m = get_flashed_messages(with_categories=True) %}
+ 
+
+  {% for cat, msg in m %}
+        {% if cat=='error' %}
+
+        <div class="alert alert-danger">{{msg}}</div>
+
+        {% else %}
+         <div class="alert alert-success">{{msg}}</div>
+        {% endif%}
+
+
+  {% endfor %}
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control" id="user_email" placeholder="name@example.com" name="email">
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="password" name="pwd" class="form-control" id="user_Password" placeholder="Password">
+      <!-- <span id="eye" class="eye"><i class="fa fa-eye" ></i></span> -->
+
+      <label for="floatingPassword" class="floating-input">Password</label>
+    </div>
+   
+     
+    <button class="w-100 btn btn-lg btn-dark noround form-floating gradient" type="submit">Login</button>
+
+    <div class="form-floating">
+      <p> Don't have account? <a href="/register/">Signup</a>   </p>
+     
+    </div>
+  </form>
+</div>
+
+</main>
+
+<!--login changeend-->
+ 
+<!--footer-->
+<footer class="bg-dark text-light py-4 ">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 ">
+        <h5>Contact Us</h5>
+        <p>Email: info@example.com</p>
+        <p>Phone: 123-456-7890</p>
+      </div>
+      <div class="col-md-4">
+         <h5>Follow Us</h5>
+        <p>Facebook</p>
+        <p>Twitter</p>
+        <p>Instagram </p> 
+      </div>
+      <div class="col-md-4">
+        <h5>Information</h5>
+        <p>About Us</p>
+        <p>Privacy Policy</p>
+        <p>Terms & Conditions</p>
+      </div>
+
+    </div>
+    <div class="row bottom">
+      <div class="col text-light d-flex justify-content-center mb-2 align-items-center pt-3">
+<p class="mb-0">Copyright © 2024 Brand</p>
+    </div>
+    </div>
+  </div>
+</footer>
+</div>
+
+    </div>
+  
+     
+<!--footer end-->
+
+    
+
+ <!--modal start-->
+ 
+ <!--modal end-->
+
+</div>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="index.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        print('hello')
+      $('#eye').click(function(){
+        $('#user_password').attr('type','text')
+      })
+});
+
+
+
+    </script>
+  </body>
+</html>

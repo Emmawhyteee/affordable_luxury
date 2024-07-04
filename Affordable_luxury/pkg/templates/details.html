@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+<div class="container">
+    <div class="row gradient py-2 row-cols-md-4">
+        {% if products %}
+            {% for product in products %}
+            <div class="col-md-3 justify-content-between px-2 ">
+                <div class="card" style="width: 17rem;">
+                    <img src="../static/products/{{product.prod_image}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="`card-title">{{product.prod_title}}</h5>
+                    <p class="card-text text-dark fw-30"><sup>₦</sup>{{product.prod_price}}</p>
+                    </div>
+                </div>
+                
+                                    
+            </div>
+            {% endfor %}
+        {% endif %}
+
+    </div>
+</div>
+
+
+{% block advert %}
+{% endblock %}
+
+{% block carousel %}
+{% endblock %}
+
+{% block hero %}
+{% endblock %}
+
+{% block goods %}
+{% endblock %}
+
+{% block dashboard %}
+       
+{% endblock %}
+
+{% block foodstuff %}
+{% endblock %}
+
+
+ {% block footer %}
+{% endblock %}
+
+
+{% block modal %}
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Product Details</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body adjust">
+          
+            <!--body-->
+
+            <div class="container">
+                <div class="row gradient py-2 row-cols-md-6 mx-auto mb-1">
+                  
+                        {% for product in products %}
+                        
+                        <div class="col-md-12 justify-content-between px-2 mt-2 ">
+                            <div class="card " style="width: 17rem;">
+            
+                                <img src="/static/products/{% if product.prod_image %}{{product.prod_image}}{%else%}{{tears.PNG}}{% endif %}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title">{{product.prod_title}}</h5>
+                                <p class="card-text text-dark fw-30"><sup>₦</sup>{{product.prod_price}}</p>
+                                <p class="card-text text-dark fw-30 bg-warning p-2"><b>{{product.prod_description}}</b></p>
+                                </div>
+            
+                            </div>
+                        </div>
+                        {% endfor %}
+                    
+            
+                </div>
+            </div>
+                  
+
+
+            <!--bodyend-->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn gradient" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+ {% block offcanvas %}
+{% endblock %}
+
+
+

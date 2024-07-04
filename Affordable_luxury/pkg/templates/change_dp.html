@@ -1,0 +1,85 @@
+
+
+{% extends "base.html"%} 
+
+{%block banner%}
+
+{% endblock banner %}
+
+{% block advert %}
+{% endblock %}
+
+{% block carousel %}
+{% endblock %}
+
+{% block hero %}
+{% endblock %}
+
+{% block goods %}
+{% endblock %}
+
+{% block dashboard %}
+       
+{% endblock %}
+
+{% block foodstuff %}
+{% endblock %}
+
+
+
+{% block offcanvas %}
+{% endblock %}
+
+
+{% block footer %}
+{% endblock %}
+
+
+
+
+
+
+{% block modal %}
+<div class="modal fade" id="dpModal" tabindex="-1" aria-labelledby="dpModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <!----->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="dpModalLabel">Upload Profile Picture</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!--start-->
+                
+                   
+                        <div class="content" style="background-color: white;">
+                           
+                            <form enctype="multipart/form-data" method="post" action="{{url_for('change_dp')}}">
+                             <input type="hidden" name="csrf_token" value="{{csrf_token()}}"> <!--always add this section of csrf_token when dealing with an external form-->
+                            
+                                <input
+                                              type="file"
+                                              class="form-control mb-2"
+                                              name="dp"
+                                              required
+                                            />
+                            </div>
+                            
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-warning">
+                                   Upload 
+                                  </button>
+                            </div>
+                        </form>
+                        </div>
+                        
+                    
+                <div class="modal-footer">
+            <button type="button" class="btn btn-secondary gradient" data-bs-dismiss="modal">Close</button>
+        </div>
+        </div>
+        <!----->
+    </div>
+    </div>
+    
+    {% endblock %}

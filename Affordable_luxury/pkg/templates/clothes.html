@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+<div class="container">
+    <div class="row gradient py-2 row-cols-md-4 row-cols-lg-4  mb-1">
+      
+            {% for product in products %}
+            
+            <div class="col-md-3 col-10 justify-content-between px-1 mt-2 ">
+                <div class="card" style="width: 17rem;">
+
+                    <img src="/static/products/{{product.prod_image}}/" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">{{product.prod_title}}</h5>
+                    <p class="card-text text-secondary fw-30"><sup>₦</sup>{{product.prod_price}}</p>
+                    </div>
+                    <form action="{{url_for('addcart')}}" method="post">
+                    <div class="card-footer d-flex justify-content-between">
+                        <p><a href="{{url_for('details',id=product.prod_id)}}" class="float-left btn btn-sm btn-warning me-1">Details</a></p>
+                       <p> <a href="#" class="float-right btn btn-sm btn-danger me-5"><i class="fa fa-shopping-cart  add_cart cart1" id="add-to-cart"></i></a></p>
+                        <label for="">Qty:&nbsp;</label>
+                        <input type="number" name="quantity" id="" value="1" min="1" max="product.products" class="form-control w-18">
+                    </div>
+                </form>
+                </div>
+            </div>
+            {% endfor %}
+        
+
+    </div>
+</div>
+      

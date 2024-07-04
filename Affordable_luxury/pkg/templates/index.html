@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="shoes,bag,foodstuff,wristwatch,accessories,machines,camera,gown,wedding,kitchen">
+    <meta name="description" content="A website to buy Everything you Need...">
+    <meta name="author" content="Emmawhyte">
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href="/static/animate.min.css" />
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="container main">
+ <!-- start_navbar -->
+
+  <div class="row mt-1">
+    <div class="col">
+      
+   <nav id="mainNav" class="navbar navbar-expand-md sticky-top py-3 mb-2 navbar-white">
+    <div class="container"><a class="navbar-brand d-flex align-items-center" href="">
+      <span class="bs-icon-sm bs-icon-circle bs-icon-danger shadow d-flex justify-content-center align-items-center me-2 bs-icon">
+      
+                    
+                </span><span class="text-danger bord logoo"><b>𝑨𝒇𝒇𝒐𝒓𝒅𝒂𝒃𝒍𝒆 𝑳𝒖𝒙𝒖𝒓𝒚</b></span></span></a><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div id="navcol-1" class="collapse navbar-collapse">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link active text-danger " href="">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-danger" href="">Category</a></li>
+                <li class="nav-item"><a class="nav-link text-danger" href="">Products</a></li>
+                <li class="nav-item"><a class="nav-link text-danger" href="">Blogs</a></li>
+            </ul>
+            <!-- <input type="search" class="searchh searchbar" placeholder="Search"/> -->
+            <a href="#" class="me-2 nav-link"><i class="fa fa-shopping-cart icon-class  cart1 m-3 " data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <span class="badge badge-counter text-bg-secondary counting rounded-pill num">0</span></i> </a>
+            <a class="btn btn-danger lgn shadow me-2  " role="button" href="{{url_for('register')}}">Sign up</a>
+            <a class="btn btn-danger lgn shadow " role="button" href="{{url_for('login')}}">Log In</a> 
+
+            
+    
+            
+                   
+        </div>
+    </div>
+  </nav>
+  
+    </div>
+  </div>
+
+<!--navbar end-->
+
+<!--hero section start-->
+<!--advert start-->
+<div class="row mb-3">
+  <div class="col">
+    <img src="/static/clothes/topbanner-1.jpg" alt="topbanner">
+  </div>
+</div>
+<!--advert end-->
+
+<div class="row">
+  <div class="col-9 col-lg-6 mb-2 mx-auto ">
+    <div>
+      <!--carousel1 start-->
+      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/static/clothes/p19.png" class="d-block w-100 h-50 img-fluid d-block mx-auto" alt="clothes_displayed">
+          </div>
+          <div class="carousel-item">
+            <img src="/static/Accessories/p3.png" class="d-block w-100 h-50 img-fluid d-block mx-auto" alt="wrist-watch_displayed">
+          </div>
+          <div class="carousel-item">
+            <img src="/static/bags/crosshand graffiti.jpeg" class="d-block w-100 h-50 img-fluid d-block mx-auto" alt="ladies bags">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      
+       <!--carousel1 end-->
+    </div>
+
+    
+  </div>
+
+  <div class="col-10 col-md-6 col-lg-6">
+    <div class="hero1 col-10">
+       <!--hero1 start-->
+       <div class="middle">
+      <h1 class="">𝟓𝟎 % <span class="bonus">off</span></h1>
+
+      <p>Let's make you a Boss!</p><br>
+      <p>Big deals on fashion & Accessories.</p>
+      </div>
+      
+       <!--hero1 end-->
+    </div>
+    
+    <div class="col-10 hero2 hero1 middle1 middle ">
+
+       <!--carousel2 start-->
+     
+      <h3 class="animate__animated animate__flipInY aa" >Available!</h3>
+      <h3 class="animate__animated animate__flipInY bb">Affordable!</h3>
+      <h3 class="animate__animated animate__flipInY cc">Reliable!</h3>
+
+      <a class="btn btn-danger animate__animated animate__flipInY animate__heartBeat mt-3 dd">Shop now</a>
+      
+       <!--carousel2 end-->
+    </div>
+
+  
+
+  </div>
+  
+</div>
+
+<!--hero section end-->
+<div class="row mb-1 ee">
+  
+  <div class="col ff">
+    <a href="">Clothes</a>
+  </div>
+   <div class="col ll"><a href="">Shoes</a></div>
+    <div class="col pp"><a href="">Accessories</a></div>
+</div>
+
+<!--featured product-->
+
+
+<div class="container">
+  <div class="row gradient py-2 row-cols-md-2  products row-cols-1 row-cols-xl-4   mb-1 justify-content-center justify-content-md-start">
+    
+          {% for product in products %}
+          
+          <div class="col-10 g-2 justify-content-between px-1 mt-2 ">
+              <div class="card">
+
+                  <img src="/static/products/{{product.prod_image}}/" class="card-img-top " alt="...">
+                  <div class="card-body">
+                  <h5 class="card-title">{{product.prod_title}}</h5>
+                  <p class="card-text text-secondary fw-30"><sup>₦</sup>{{product.prod_price}}</p>
+                  </div>
+                  <form action="{{url_for('addcart')}}" method="post">
+                      <input type="hidden" name="csrf_token" value="{{csrf_token()}}" >
+                      <input type="hidden" name="product_id" value="{{product.prod_id}}" >
+                  <div class="card-footer d-flex justify-content-between">
+                      <p><a href="{{url_for('details',id=product.prod_id)}}" class="float-left btn btn-sm btn-warning me-1">Details</a></p>
+                     <p> <button type="submit" class="float-right btn btn-sm btn-danger me-3" onclick="
+                     alert('Login to Add to Cart')">
+                      <i class="fa fa-shopping-cart  add_cart cart1" id="add-to-cart"></i></button></p>
+                      <label for="">Qty:&nbsp;</label>
+                      <input type="number" name="quantity" id="" value="1" min="1" max="product.products" class="form-control w-100">
+                  </div>
+              </form>
+              </div>
+          </div>
+          {% endfor %}
+      
+
+  </div>
+</div>
+<!--featured product end-->
+  
+      <div class="container mb-1">
+        <div class="row py-3">
+            <div class="col-md-12">
+              <h1 class="express animate__animated animate__zoomInLeft feg"> Order your Foodstuffs Here! <span class="alert-danger express animate__animated animate__zoomInLeft feg1">Express Delivery!</span></h1>
+            </div>
+        </div>
+
+        <!--swiper start-->
+        {% include 'index_include.html' %}
+
+              <!--swiper end -->
+    </div>
+    
+  <!--footer-->
+  <div class="container">
+    <footer class="bg-dark text-light py-4 ">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-4 text-center">
+                <h5>Contact Us</h5>
+                <p>Email: info@example.com</p>
+                <p>Phone: 123-456-7890</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <h5>Follow Us</h5>
+                <p>Facebook</p>
+                <p>Twitter</p>
+                <p>Instagram </p> 
+            </div>
+            <div class="col-md-4 text-center">
+                <h5>Information</h5>
+                <p>About Us</p>
+                <p>Privacy Policy</p>
+                <p>Terms & Conditions</p>
+            </div>
+    
+            </div>
+            <div class="row bottom">
+            <div class="col text-light d-flex justify-content-center mb-2 align-items-center pt-3">
+            <p class="mb-0">Copyright © 2024 Brand</p>
+            </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</div>
+
+<!--footer end-->
+<div class="row">
+  <div class="col">
+    <a href="#" class="arrow"><i><img src="/static/clothes/up-arrow.png" alt="" width="30px"></i></a>
+
+  </div>
+</div>
+
+
+ <!--modal start for cart-->
+
+
+<!-- Modal -->
+<!--  -->
+
+ <!--modal end-->
+
+</div>
+    <script src="/static/jquery-3.7.1.min.js"></script>
+    <script src="/static/index.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </body>
+</html>

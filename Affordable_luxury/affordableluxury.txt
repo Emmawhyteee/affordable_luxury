@@ -1,0 +1,32 @@
+{% block advert %}
+{% endblock %}
+
+{% block carousel %}
+{% endblock %}
+
+{% block hero %}
+{% endblock %}
+
+{% block goods %}
+{% endblock %}
+
+{% block dashboard %}
+       
+{% endblock %}
+
+{% block foodstuff %}
+{% endblock %}
+
+
+ {% block footer %}
+{% endblock %}
+
+
+{% block modal %}
+{% endblock %}
+
+ {% block offcanvas %}
+{% endblock %}
+
+
+

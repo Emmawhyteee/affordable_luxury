@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+<!--navbar end-->
+
+<!--hero section start-->
+<!--advert start-->
+{% block advert %}
+<div class="container">
+  <div class="row mb-3">
+    <div class="col">
+      <img src="/static/clothes/topbanner-1.jpg" alt="topbanner">
+    </div>
+  </div>
+</div>
+{% endblock %}
+<!--advert end-->
+
+{% block goods %}
+
+
+<div class="container">
+  <div class="row gradient py-2 row-cols-md-2 row-cols-xl-4 mb-1">
+    {% for product in products %}
+    
+          
+          <div class="col-10 justify-content-between px-2 mt-2 ">
+              <div class="card" style="width: 17rem;">
+                <img src="/static/products/{{product.prod_image}}" class="card-img-top" alt="...">
+
+                  <div class="card-body">
+                  <h5 class="card-title">{{product.prod_title}}</h5>
+                  <p class="card-text text-dark fw-30"><sup>₦</sup>{{product.prod_price}}</p>
+                </div>
+                
+                <div class="card-footer d-flex justify-content-between">
+                  <form action="{{url_for('addcart')}}" method="post">
+                    <input type="hidden" name="csrf_token" value="{{csrf_token()}}" >
+                    <input type="hidden" name="product_id" value="{{product.prod_id}}" >
+                    <div class="d-flex justify-content-between">
+                    <p> <button type="submit" class="float-right btn btn-sm btn-danger me-5"><i class="fa fa-shopping-cart  add_cart cart1" id="add-to-cart"></i></button></p>
+                    <label for="">Qty:&nbsp;</label>
+                    <input type="number" name="quantity" id="" value="1" min="1" max="product.products" class="form-control w-18">
+                  </div>
+
+                     </form>
+                                          
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-md-3 mt-1">
+            <p class="card-text text-dark fw-30 bg-warning p-2"><b>{{product.prod_description}}</b></p>
+
+          </div>
+         
+          {% endfor %}
+          
+          
+        </div>
+      </div>
+      
+      {% endblock %}
+
+
+
+<!--market places end-->

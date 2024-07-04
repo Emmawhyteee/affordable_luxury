@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<main class="form-signin w-100 m-auto">
+
+  <div class="container col-md-6 px-4 py-5" >
+   
+   
+    <!-- content begins -->   
+   
+  <h1 class="h3 mb-3 text-center Well">Affordable|Luxury shopping <br> Create Account</h1>
+  
+  
+  {% set m = get_flashed_messages(with_categories=True) %}
+ 
+
+  {% for cat, msg in m %}
+        {% if cat=='error' %}
+
+        <div class="alert alert-danger">{{msg}}</div>
+
+        {% else %}
+         <div class="alert alert-success">{{msg}}</div>
+        {% endif%}
+
+
+  {% endfor %}
+
+  
+  
+  <form action="" method="post">   
+  <div class="form-group row mb-3">
+    <div class="col-md-6">
+      <div class="form-floating">
+        <input type="hidden" name="csrf_token" value="{{csrf_token()}}"> <!--always add this section of csrf_token when dealing with an external form-->
+        <input type="text" name="fname" class="form-control" id="floatingfname" placeholder="Firstname" required>
+        <label for="floatingfname">Firstname</label>
+      </div>
+     </div>
+     <div class="col-md-6">
+      <div class="form-floating">
+        <input type="text" name="lname" class="form-control" id="floatinglname" placeholder="Lastname" required>
+        <label for="floatinglname">Lastname</label>
+      </div>
+     </div>
+  </div>
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" id="email" name="email" required>
+        <label for="floatingInput">Email address</label>
+      </div>
+      <p id="feedback"></p>
+      <div class="form-floating mb-3">
+        <input type="password" name="pwd" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Password</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="password" name="pwd2" class="form-control" id="floatingPassword" placeholder="Confirm Password">
+        <label for="floatingPassword">Confirm Password</label>
+      </div>
+      
+       
+      <button class="w-100 btn btn-lg btn-dark noround gradient" type="submit">Create Account</button>
+      <div class="form-floating">
+        <p> Have an account? <a href="{{url_for('login')}}">Login</a>   </p>
+       
+      </div>
+      
+    </form>
+  
+  
+  
+  
+  <!-- content ends-->
+    </div>
+  
+  
+  </main>
+  
+
+{% endblock %}

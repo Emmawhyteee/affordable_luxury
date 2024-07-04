@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+    {% block advert %}
+{% endblock %}
+
+{% block carousel %}
+{% endblock %}
+
+{% block hero %}
+{% endblock %}
+
+{% block goods %}
+{% endblock %}
+
+{% block dashboard %}
+       
+{% endblock %}
+
+{% block foodstuff %}
+{% endblock %}
+
+
+ {% block footer %}
+{% endblock %}
+
+
+{% block modal %}
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <!----->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title " id="exampleModalLabel">Added to Cart</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!--start-->
+                
+                <div class="container">
+                    <div class="table-responsive">
+                        <table class="table table-sm  table-striped ">
+                            <thead>
+                                <tr>
+                                    <th scope="col">S/N</th>
+                                    
+                                    <th scope="col">Image</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Subtotal</th>
+                                    <th scope="col">Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for key, product in session['Shoppingcart'].items() %}
+                    <tr>
+
+                        <td>{{loop.index}}</td>
+                        
+                        <td><img src="/static/products/{{product.image}}" width="50" height="40" alt="product-image"></td>
+                        <td>{{product.price}}</td>
+                        <td>{{product.quantity}}</td>
+                        
+                        {% set Subtotal = product.quantity|int * product.price|float %}
+                        <td>{{"%0.2f"|format((Subtotal|float))}}</td>
+                        
+                        <td><a href="{{url_for('delete_item',id=key)}}" class="btn-sm lgn gradient btn dcart">Remove</a></td>
+                        
+                    </tr> 
+                   
+                        
+                    {% endfor %}
+                    
+                    
+              
+                   
+                      </tbody>
+                      
+                    </table>
+                    <td><b>Total:</b> &nbsp;<sup>₦</sup> {{grandtotal}}</td>
+                   
+                    <td><p class="delivery"><a href="#" type="button" class="delivery1">Add delivery Address</a></p><br>
+                    <label for="delivery"><b>Delivery Address :</b></label>
+                        <input type="text" class="hidden mb-2 form-control" id="delivery" name="delivery" placeholder="Delivery Address">
+                    </td>
+                <!---->
+              </div>
+    
+            <!--end-->
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <form action="{{url_for('checkout')}}" method="post">
+                <input type="hidden" name="csrf_token" value="{{csrf_token()}}"> 
+            <button type="submit" class="btn btn-danger gradient">CheckOut</button>
+        </form>
+        </div>
+        </div>
+       <!----->
+    </div>
+    </div>
+    
+{% endblock %}
+
+ {% block offcanvas %}
+{% endblock %}
+
+

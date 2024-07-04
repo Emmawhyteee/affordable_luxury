@@ -1,0 +1,730 @@
+{% extends 'base.html' %}
+<!--navbar end-->
+<!--dashboard start-->
+
+{% block navbar %} {% endblock navbar %} {% block dashboard %}
+<div class="container mt-1">
+  <div id="wrapper">
+    <div id="content-wrapper" class="d-flex flex-column">
+      <div id="content">
+        <nav
+          class="navbar navbar-expand bg-white shadow mb-4 topbar static-top navbar-light"
+        >
+          <!-- <div class="container-fluid"><button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle me-3" type="button"><i class="fas fa-bars"></i></button> -->
+          <form
+            class="d-none d-sm-inline-block me-auto ms-md-3 my-2 my-md-0 mw-100 navbar-search"
+          >
+            <div class="d-flex justify-content-between">
+              <div class="input-group">
+                <input
+                  class="form-control border-0 small searchC"
+                  type="text"
+                  placeholder="Search for ..."
+                />
+                <button class="btn btn-primary py-0" type="button">
+                  <i class="fa fa-search"></i>
+                </button>
+              </div>
+
+              <div
+                class="container ms-5 navbar-brand d-flex align-items-center"
+              >
+                <span class="text-danger bord logoo">
+                  <b>𝑨𝒇𝒇𝒐𝒓𝒅𝒂𝒃𝒍𝒆 𝑳𝒖𝒙𝒖𝒓𝒚</b>
+                </span>
+              </div>
+            </div>
+          </form>
+          <ul class="navbar-nav flex-nowrap ms-auto">
+            <li class="nav-item dropdown d-sm-none no-arrow">
+              <a
+                class="dropdown-toggle nav-link"
+                aria-expanded="false"
+                data-bs-toggle="dropdown"
+                href="#"
+                ><i class="fas fa-search"></i
+              ></a>
+              <div
+                class="dropdown-menu dropdown-menu-end p-3 animated--grow-in"
+                aria-labelledby="searchDropdown"
+              >
+<!------------------>
+
+
+              {% set m = get_flashed_messages(with_categories=True) %}
+ 
+
+              {% for cat, msg in m %}
+                    {% if cat=='error' %}
+            
+                    <div class="alert alert-danger">{{msg}}</div>
+            
+                    {% else %}
+                     <div class="alert alert-success">{{msg}}</div>
+                    {% endif%}
+            
+            
+              {% endfor %}
+<!------------------>
+
+
+                <form class="me-auto navbar-search w-100">
+                  <div class="input-group">
+                    <input
+                      class="bg-light form-control border-0 small"
+                      type="text"
+                      placeholder="Search for ..."
+                    />
+                    <div class="input-group-append">
+                      <button class="btn btn-primary py-0" type="button">
+                        <i class="fa fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </li>
+            <li class="nav-item dropdown no-arrow mx-1">
+              <div class="nav-item dropdown no-arrow">
+                <a
+                  class="dropdown-toggle nav-link"
+                  aria-expanded="false"
+                  data-bs-toggle="dropdown"
+                  href="#"
+                >
+                  <span class="badge bg-danger rounded-pill bell_badge pb-1"
+                    >3+</span
+                  ><i class="fa fa-bell fa-fw bell"></i
+                ></a>
+                <div
+                  class="dropdown-menu dropdown-menu-end dropdown-list animated--grow-in"
+                >
+                  <h6 class="dropdown-header">alerts center</h6>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="me-3">
+                      <div class="bg-primary icon-circle">
+                        <i class="fa fa-file-alt text-white"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <span class="small text-gray-500">December 12, 2019</span>
+                      <p>A new monthly report is ready to download!</p>
+                    </div> </a
+                  ><a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="me-3">
+                      <div class="bg-success icon-circle">
+                        <i class="fa fa-donate text-white"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <span class="small text-gray-500">December 7, 2019</span>
+                      <p>₦29990.29 has been deposited into your account!</p>
+                    </div> </a
+                  ><a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="me-3">
+                      <div class="bg-warning icon-circle">
+                        <i class="fas fa-exclamation-triangle text-white"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <span class="small text-gray-500">December 2, 2019</span>
+                      <p>
+                        Spending Alert: We&#39;ve noticed unusually high
+                        spending for your account.
+                      </p>
+                    </div> </a
+                  ><a
+                    class="dropdown-item text-center small text-gray-500"
+                    href="#"
+                    >Show All Alerts</a
+                  >
+                </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown no-arrow mx-1">
+              <div class="nav-item dropdown no-arrow">
+                <a
+                  class="dropdown-toggle nav-link"
+                  aria-expanded="false"
+                  data-bs-toggle="dropdown"
+                  href="#"
+                >
+                  <span class="badge bg-danger rounded-pill msg_badge">7</span
+                  ><i class="fa fa-envelope fa-fw msg"></i
+                ></a>
+                <div
+                  class="dropdown-menu dropdown-menu-end dropdown-list animated--grow-in"
+                >
+                  <h6 class="dropdown-header">alerts center</h6>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="dropdown-list-image me-3">
+                      <img class="rounded-circle" src="avatars/avatar4.jpeg" />
+                      <div class="bg-success status-indicator"></div>
+                    </div>
+                    <div class="fw-bold">
+                      <div class="text-truncate">
+                        <span
+                          >Hi there! I am wondering if you can help me with a
+                          problem I&#39;ve been having.</span
+                        >
+                      </div>
+                      <p class="small text-gray-500 mb-0">Emily Fowler - 58m</p>
+                    </div> </a
+                  ><a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="dropdown-list-image me-3">
+                      <img class="rounded-circle" src="avatars/avatar2.jpeg" />
+                      <div class="status-indicator"></div>
+                    </div>
+                    <div class="fw-bold">
+                      <div class="text-truncate">
+                        <span
+                          >I have the photos that you ordered last month!</span
+                        >
+                      </div>
+                      <p class="small text-gray-500 mb-0">Jae Chun - 1d</p>
+                    </div> </a
+                  ><a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="dropdown-list-image me-3">
+                      <img class="rounded-circle" src="avatars/avatar3.jpeg" />
+                      <div class="bg-warning status-indicator"></div>
+                    </div>
+                    <div class="fw-bold">
+                      <div class="text-truncate">
+                        <span
+                          >Last month&#39;s report looks great, I am very happy
+                          with the progress so far, keep up the good work!</span
+                        >
+                      </div>
+                      <p class="small text-gray-500 mb-0">
+                        Morgan Alvarez - 2d
+                      </p>
+                    </div> </a
+                  ><a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="dropdown-list-image me-3">
+                      <img class="rounded-circle" src="avatars/avatar5.jpeg" />
+                      <div class="bg-success status-indicator"></div>
+                    </div>
+                    <div class="fw-bold">
+                      <div class="text-truncate">
+                        <span
+                          >Am I a good boy? The reason I ask is because someone
+                          told me that people say this to all dogs, even if they
+                          aren&#39;t good...</span
+                        >
+                      </div>
+                      <p class="small text-gray-500 mb-0">
+                        Chicken the Dog · 2w
+                      </p>
+                    </div> </a
+                  ><a
+                    class="dropdown-item text-center small text-gray-500"
+                    href="#"
+                    >Show All Alerts</a
+                  >
+                </div>
+              </div>
+              <div
+                class="shadow dropdown-list dropdown-menu dropdown-menu-end"
+                aria-labelledby="alertsDropdown"
+              ></div>
+            </li>
+            <div class="d-none d-sm-block topbar-divider"></div>
+            <li class="nav-item dropdown no-arrow">
+              <div class="nav-item dropdown no-arrow">
+                <a
+                  class="dropdown-toggle nav-link"
+                  aria-expanded="false"
+                  data-bs-toggle="dropdown"
+                  href="#"
+                >
+                  <span class="d-none d-lg-inline me-2 text-gray-600 small"
+                    >Nwankwo Emmanuel</span
+                  >
+                </a>
+                <div
+                  class="dropdown-menu shadow dropdown-menu-end animated--grow-in"
+                >
+                  <a class="dropdown-item" href="#"
+                    ><i class="fa fa-user fa-sm fa-fw me-2 text-gray-400"></i
+                    > Profile</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    ><i class="fa fa-cogs fa-sm fa-fw me-2 text-gray-400"></i
+                    > Settings</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    ><i class="fa fa-list fa-sm fa-fw me-2 text-gray-400"></i
+                    > Activity log</a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="{{url_for('admin_logout')}}"
+                    ><i
+                      class="fa fa-sign-out fa-sm fa-fw me-2 text-gray-400"
+                    ></i
+                    > Logout</a
+                  >
+                </div>
+              </div>
+            </li>
+          </ul>
+          <!-- </div> -->
+        </nav>
+         <!----------flash-------------->
+         {% set m = get_flashed_messages(with_categories=True) %}
+ 
+
+         {% for cat, msg in m %}
+               {% if cat=='error' %}
+       
+               <div class="alert alert-danger">{{msg}}</div>
+       
+               {% else %}
+                <div class="alert alert-success">{{msg}}</div>
+               {% endif%}
+       
+       
+         {% endfor %}
+
+         
+         <!-----------flashend------------->
+
+        <div class="container">
+          <div
+            class="d-sm-flex justify-content-between align-items-center mb-4"
+          >
+            <h3 class="text-dark mb-0">
+              Dashboard
+              <button
+                class="btn btn-warning rounded"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasWithBothOptions"
+                aria-controls="offcanvasWithBothOptions"
+              >
+                <i class="fa fa-plus"></i>
+              </button>
+            </h3>
+            <a
+              class="btn btn-primary btn-sm d-none d-sm-inline-block"
+              role="button"
+              href="#"
+              ><i class="fas fa-download fa-sm text-white-50"></i> Generate
+              Report</a
+            >
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-xl-3 mb-4">
+              <div class="card shadow border-start-primary admincard py-2">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col me-2">
+                      <div
+                        class="text-uppercase text-primary fw-bold text-xs mb-1"
+                      >
+                        <span>Earnings (monthly)</span>
+                      </div>
+                      <div class="text-dark fw-bold h5 mb-0">
+                        <span>₦4,000,000</span>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fa fa-calendar fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3 mb-4">
+              <div class="card shadow border-start-success admincard py-2">
+                <div class="card-body">
+                  <div class="row align-items-center no-gutters">
+                    <div class="col me-2">
+                      <div
+                        class="text-uppercase text-success fw-bold text-xs mb-1"
+                      >
+                        <span>Earnings (annual)</span>
+                      </div>
+                      <div class="text-dark fw-bold h5 mb-0">
+                        <span>₦21,500,000</span>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fa fa-naira-sign fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3 mb-4">
+              <div class="card shadow border-start-info admincard py-2">
+                <div class="card-body">
+                  <div class="row align-items-center">
+                    <div class="col me-2">
+                      <div
+                        class="text-uppercase text-info fw-bold text-xs mb-1"
+                      >
+                        <span>Tasks</span>
+                      </div>
+                      <div class="row align-items-center">
+                        <div class="col-auto">
+                          <div class="text-dark fw-bold h5 mb-0 me-3">
+                            <span>50%</span>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="progress progress-sm">
+                            <div
+                              class="progress-bar bg-info"
+                              aria-valuenow="50"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                              style="width: 50%"
+                            >
+                              <span class="visually-hidden">50%</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fa fa-clipboard-list fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3 mb-4">
+              <div class="card shadow border-start-warning admincard py-2">
+                <div class="card-body">
+                  <div class="row align-items-center no-gutters">
+                    <div class="col me-2">
+                      <div
+                        class="text-uppercase text-warning fw-bold text-xs mb-1"
+                      >
+                        <span>Pending Requests</span>
+                      </div>
+                      <div class="text-dark fw-bold h5 mb-0">
+                        <span>18</span>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fa fa-comments fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-7 col-xl-8">
+              <div class="card shadow mb-4">
+                <div
+                  class="card-header d-flex justify-content-between align-items-center"
+                >
+                  <h6 class="text-primary fw-bold m-0 p-2">Products Overview</h6>
+                 
+                </div>
+                <div class="card-body">
+                      <table class="table table-sm  table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">S/N</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Image</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {% for product in products %}
+                         <tr>
+                          <td>{{loop.index}}</td>
+                          <td>{{product.prod_title}}</td>
+                          <td><img src="{{url_for('static',filename='products/' + product.prod_image)}}" width="50" height="40" alt="product_image"></td>
+                          <td>{{product.prod_price}}</td>
+                          <td>{{product.prod_quantity}}</td>
+                          <td><a href="{{url_for('delete',id=product.prod_id)}}" class="btn btn-danger btn-sm lgn gradient " onclick="return confirm('Do you really want to delete this Product?')">Delete</a></td>
+                         </tr> 
+                         {% endfor %}
+                        </tbody>
+                      </table>
+                    
+                  
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5 col-xl-4 mb-4">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="text-primary fw-bold m-0">Projects</h6>
+                </div>
+                <div class="card-body">
+                  <h4 class="small fw-bold">
+                    Pending Orders<span class="float-end">20%</span>
+                  </h4>
+                  <div class="progress mb-4">
+                    <div
+                      class="progress-bar bg-danger"
+                      aria-valuenow="20"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 20%"
+                    >
+                      <span class="visually-hidden">20%</span>
+                    </div>
+                  </div>
+                  <h4 class="small fw-bold">
+                    Sales tracking<span class="float-end">40%</span>
+                  </h4>
+                  <div class="progress mb-4">
+                    <div
+                      class="progress-bar bg-warning"
+                      aria-valuenow="40"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 40%"
+                    >
+                      <span class="visually-hidden">40%</span>
+                    </div>
+                  </div>
+                  <h4 class="small fw-bold">
+                    Customer Database<span class="float-end">60%</span>
+                  </h4>
+                  <div class="progress mb-4">
+                    <div
+                      class="progress-bar bg-primary"
+                      aria-valuenow="60"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 60%"
+                    >
+                      <span class="visually-hidden">60%</span>
+                    </div>
+                  </div>
+                  <h4 class="small fw-bold">
+                    Payout Details<span class="float-end">80%</span>
+                  </h4>
+                  <div class="progress mb-4">
+                    <div
+                      class="progress-bar bg-info"
+                      aria-valuenow="80"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 80%"
+                    >
+                      <span class="visually-hidden">80%</span>
+                    </div>
+                  </div>
+                  <h4 class="small fw-bold">
+                    Account setup<span class="float-end">Complete!</span>
+                  </h4>
+                  <div class="progress mb-4">
+                    <div
+                      class="progress-bar bg-success"
+                      aria-valuenow="100"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 100%"
+                    >
+                      <span class="visually-hidden">100%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+
+  <!--New offcanvas-->
+
+  {% block offcanvas %}
+
+  <div
+    class="offcanvas offcanvas-start"
+    data-bs-scroll="true"
+    tabindex="-1"
+    id="offcanvasWithBothOptions"
+    aria-labelledby="offcanvasWithBothOptionsLabel"
+  >
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+        <i class="fa fa-dashboard"
+          >&nbsp;<b class="text-danger fw-30">DashBoard</b></i
+        >
+      </h5>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="card-body">
+        <!-- <p class="card-title"><a href="{{url_for('dash')}}" class="ss "> <i class="fa fa-dashboard ss"> &nbsp; DashBoard</i></a></p> -->
+        <p class="card-title">
+          <a href="" class="ss">
+            <i class="fa fa-shopping-bag ss"> &nbsp;Products </i></a
+          >
+        </p>
+        <p class="card-title">
+          <a href=""><i class="fa fa-envelope ss">&nbsp; Inbox</i></a>
+        </p>
+        <p class="card-title">
+          <a href="" class="ss">
+            <i class="fa fa-user ss"> &nbsp;profile </i></a
+          >
+        </p>
+        <p class="card-title">
+          <a href="" class="ss">
+            <i class="fa fa-credit-card ss"> &nbsp; Payments</i></a
+          >
+        </p>
+
+       
+          
+            
+
+            
+                <a
+                  class="card-title ss text-danger"
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#admin"
+                  ><i class="fa fa-upload">&nbsp; Add Products</i></a
+                >
+              
+    </a>
+        <!-- <p class="card-title">
+          <a href="" class="ss">
+            <i class="fa fa-sign-out ss"> &nbsp; Logout</i></a
+          >
+        </p> -->
+      </div>
+    </div>
+    {% endblock %}
+    <!-- end New offcanvas-->
+
+    {% block modal %}
+
+    <!--modal clothes start-->
+    <div
+      class="modal fade"
+      id="admin"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+    <!---------------------------------------------------------------------->
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              Add Products
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- Modal Body clothes-->
+            <div class="row">
+              <div class="col">
+               
+                <form method="post" action="/addpost/" enctype="multipart/form-data">
+                  <input
+                    type="hidden"
+                    name="csrf_token"
+                    value="{{csrf_token()}}"
+                  />
+                  
+                  <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="title"
+                      name="title"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="category" class="form-label">Category</label>
+                    <select name="category" id="category" class="form-control">
+                      <option value="" required>Select One</option>
+                      {% for prod in categories %}
+                      <option value="{{prod.cat_id}}">{{prod.cat_name}}</option>
+                      {% endfor %}
+                    </select>
+                  </div>
+        
+                  <div class="mb-3">
+                    <label for="price" class="form-label">price</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="price"
+                      name="price" required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="level" class="form-label">Description</label>
+                    <textarea
+                      type="text"
+                      name="content"
+                      class="form-control"
+                      row="10"
+                      cols="20"
+                      placeholder="Desription" required
+                    ></textarea>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label" for="customFile"
+                      >Upload Cover</label
+                    >
+                    <input
+                      type="file"
+                      class="form-control"
+                      id="customFile"
+                      name="imagee"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <button type="submit" class="btn btn-warning">
+                      Add Products
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- Modal Bodyend clothes-->
+          </div>
+         
+        </div>
+      </div>
+    </div>
+    <!----------------------------------------------------------------------------------------------------------->
+
+    
+
+
+
+    {% endblock %}
+
+    <!--modal clothes ends-->
+    <!--dashboard ends-->
+  </div>
+</div>
