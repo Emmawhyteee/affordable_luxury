@@ -1,0 +1,2023 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+
+.custom-color{
+  color: #64B5F5;
+}
+body {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #64B5F5;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 600;
+  font-size: small !important;
+}
+
+.navbar-brand {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #64B5F5 !important;
+}
+
+.contact-btn{
+  background-color: #64B5F5 !important;
+  color: #fff !important;
+  padding: 8px !important;
+  border-radius: 8px !important;
+  border: 1px solid #64B5F5 !important;
+}
+
+
+/* navbar dropdown */
+/* CSS for hover-based dropdown */
+.navbar .dropdown:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0; 
+}
+
+.navbar .dropdown-menu {
+  margin-top: 0; 
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* the transition effect for smooth hover */
+.navbar .dropdown-menu {
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.navbar .dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  
+}
+
+.logoo{
+  width: 35px;
+}
+
+
+.hero-section{
+  background-image: linear-gradient(
+    rgba(26, 28, 43, 0.6),
+    rgba(26, 28, 43, 0.5)
+  ), url('../static/images2/homee.jpg') !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 150px 0px !important;
+  color: white;
+  height: 500px;
+  display: flex;
+  text-align: center;
+}
+
+
+
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+} 
+
+
+
+
+.section-title1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+  font-family: "Merriweather", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+
+
+
+.learn-more{
+  background-color: #64B5F5 !important;
+  color: #fff !important;
+  border-radius: 4px !important;
+  padding: 10px !important;
+  border: 4px solid #64B5F5 !important;
+  font-weight: 400 !important;
+  cursor: pointer !important;
+  width: 150px !important;
+}
+
+.learn-more:hover{
+  background-color: #2da1fa !important;
+  color: #fff !important;
+}
+
+
+.heroo{
+  box-sizing: border-box;
+}
+
+.gradient{
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255,1),
+    rgb(207, 231, 248)
+  )
+}
+
+.bg-imagee{  
+  background-image: url('../static/images2/Get\ involved\ image\ in\ homepage.png') !important; /* Replace with your image URL */  
+  background-size: cover !important;  
+  background-position: center !important;  
+  height: 80vh !important; /* Adjust height as needed */  
+}  
+
+.about-right{
+  margin-top: 15rem !important;
+}
+
+.about-left{
+  height: 70%;
+}
+
+.involved {  
+  padding: 40px; /* Add some padding for better appearance */  
+  opacity: 0.9;  /* Set transparency level */  
+  background-color: #f7f0f0;
+  color: #000;
+  width: 45%;
+  margin-left: 55% !important;
+} 
+
+.involved-two{
+  padding: 25px;
+  width: 21rem;
+}
+
+.card-body a{
+  text-decoration: none !important;
+  color: #fff !important;
+}
+
+.card-body p a{
+  text-decoration: none !important;
+  color: #64B5F5 !important;
+}
+
+.volunteer {  
+  background-image: url('../static/images2/Frame\ 701.png'); /* Replace with your image URL */  
+  background-size: cover;  
+  background-position: center;  
+  height: 80vh; /* Adjust height as needed */  
+  color: #fff !important;
+}  
+
+.donatee {  
+  background-image: url('../static/images2/image-16.png'); /* Replace with your image URL */  
+  background-size: cover;  
+  background-position: center;  
+  height: 80vh; /* Adjust height as needed */  
+  color: #fff !important;
+
+}  
+
+.partnerr {  
+  background-image: url('../static/images2/Frame\ 7.png'); /* Replace with your image URL */  
+  background-size: cover;  
+  background-position: center;  
+  height: 80vh; /* Adjust height as needed */  
+  color: #fff !important;
+
+}  
+
+
+#newsletter{
+  margin-top: 6rem !important;
+  background-color: #92ccf8;
+  color: #fff !important;
+  position: relative;
+}
+
+.dott{
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  left: 28rem;
+  bottom: 3rem;
+}
+
+.arroww{
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  left: 35rem;
+  bottom: 6rem;
+}
+
+
+@media (max-width: 768px) {  
+  .dott, .arroww {  
+    display: none;  
+  }  
+}  
+
+.news-btn{
+  background-color: #3099e9 !important;
+  border: 1px solid #3099e9 !important;
+  color: #fff !important;
+  
+}
+
+
+
+/* ....................about-page....................... */
+
+
+.about-header {
+  background-image: url('/static/images2/ABout us page hero image.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.about-header h1 {
+  font-size: 3rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* Our Story Section */
+#our-story {
+  padding: 60px 0;
+}
+
+#our-story img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.story-text {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Mission & Vision */
+/* Original CSS remains for larger screens */  
+#mission-vision {  
+  background-color: #f9f9f9;  
+  padding: 60px 0;  
+}  
+
+.mission-card {  
+  border: none;  
+  padding: 30px;  
+  text-align: left;  
+}  
+
+.mission-card h5 {  
+  font-size: 1.3rem;  
+}  
+
+.mission-card img {  
+  max-width: 100%;  
+  border-radius: 8px;  
+}  
+
+.mission1 {  
+  margin-left: -22rem;  
+}  
+
+.mission2 {  
+  margin-left: -12rem;  
+}  
+
+.mission3 {  
+  margin-left: -5rem;  
+}  
+
+/* Add Media Queries for Responsiveness */  
+@media (max-width: 992px) { /* For medium tablets and below */  
+  .mission-card {  
+    padding: 20px;  /* Slightly smaller padding */  
+  }  
+
+  .mission-card h5 {  
+    font-size: 1.2rem; /* Adjust font size */  
+  }  
+
+  /* Remove negative margins to ensure proper layout */  
+  .mission1, .mission2, .mission3 {  
+    margin-left: 0;  
+  }  
+}  
+
+@media (max-width: 768px) { /* For small tablets and below */  
+  #mission-vision {  
+    padding: 40px 0; /* Smaller padding */  
+  }  
+  
+  .mission-card {  
+    padding: 15px;  /* Further reduced padding */  
+  }  
+
+  .mission-card h5 {  
+    font-size: 1.1rem; /* Further adjust font size */  
+  }  
+}  
+
+@media (max-width: 576px) { /* For mobile phones */  
+  #mission-vision {  
+    padding: 30px 0; /* Minimum padding for mobile */  
+  }  
+
+  .mission-card {  
+    padding: 10px; /* Minimum padding for mobile */  
+  }  
+  
+  .mission-card h5 {  
+    font-size: 1rem; /* Reduce font size for mobile */  
+  }  
+}
+
+
+
+/* Meet the Team */
+#meet-the-team {
+  padding: 60px 0;
+}
+
+.team-card {
+  border: none;
+  text-align: center;
+}
+
+.team-card img {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+/* Partners Section */
+#partners {
+  background-color: #f9f9f9;
+  padding: 40px 0;
+}
+
+#partners img {
+  max-width: 150px;
+  margin: 20px;
+}
+
+/* Contact Us Section */
+#contact-us {
+  padding: 60px 0;
+}
+
+#contact-us .contact-details {
+  margin-bottom: 30px;
+}
+
+#contact-us form input,
+#contact-us form textarea {
+  margin-bottom: 20px;
+}
+
+#contact-us form button {
+  background-color: #007bff;
+  color: white;
+}
+
+
+/* contactus-main */
+.contactt-us{
+  
+    background-image: url('../static/images2/cont.jpg')!important; /* Replace with your image URL */  
+    background-size: contain !important;  
+    background-position: right !important;  
+    background-repeat: no-repeat;
+    
+    height: 70vh !important; /* Adjust height as needed */  
+   
+}
+
+.contact2{
+  margin-top: 90px !important;
+}
+
+
+.bg-gradient {
+  background: linear-gradient(to right, #f0f8ff, #e6f3ff);
+}
+.contact-card {
+  background-color: #f0f8ff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.contact-cardred i {
+  font-size: 40px;
+  color: rgb(252, 50, 50);
+  margin-bottom: 10px;
+}
+
+.contact-cardblue i {
+  font-size: 40px;
+  color: #64B5F5;
+  margin-bottom: 10px;
+}
+
+.contact-cardgreen i {
+  font-size: 40px;
+  color: rgb(95, 245, 95);
+  margin-bottom: 10px;
+}
+
+.contact-section {
+  background-color: #f9fafb;
+  padding: 50px 0;
+}
+
+/* other...location  */
+.office-item {
+  background-color: #f9fafb;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.office-item img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+.office-info {
+  padding-left: 20px;
+}
+.office-info h5 {
+  font-weight: bold;
+}
+.office-info p {
+  margin: 0;
+}
+/* contactus-main end  */
+
+/* forms start */
+.form-container {  
+    background-color: #cecbcb;  
+    padding: 40px;  
+    border-radius: 18px;  
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  
+    width: 450px;  
+}  
+.about-group {  
+    margin-bottom: 15px;  
+}  
+.about-group label {  
+    display: block;  
+    margin-bottom: 5px;  
+}  
+.about-group input, .form-group textarea {  
+    width: 100%;  
+    padding: 10px;  
+    border: 1px solid #ccc;  
+    border-radius: 4px;  
+}  
+.about-group textarea {  
+    resize: none;  
+    height: 100px;  
+}  
+.send-button {  
+    background-color: #92ccf8 !important;  
+    color: white;  
+    border: none;  
+    padding: 10px;  
+    border-radius: 4px;  
+    cursor: pointer;  
+    width: 30%;  
+}  
+
+.send-button:hover {  
+    background-color: #456a86;  
+}
+
+.lgn{
+  background-color: #64B5F5 !important;  
+  color: white !important;  
+  border: none !important;  
+  padding: 20px !important;  
+  border-radius: 4px !important;  
+  cursor: pointer !important;  
+  width: 20% !important;  
+}
+/* forms end */
+.lgnn{
+  background-color: #64B5F5 !important;
+  color: #fff !important;
+  border: none;
+  padding: 10px;
+  width: 25% !important;
+}
+
+.box1:hover {
+  background-color: #64B5F5;
+  border: 1px solid #64B5F5;
+  color: #fff;
+  transition: background-color 0.8s ease;
+}
+
+.box1:hover .card-body p a {
+ 
+  color: #fff !important;
+  transition: background-color 0.8s ease;
+}
+
+.box1:hover .icon1{
+  background-color: #fff;
+  border: none;
+  transition: background-color 0.8s ease;
+}
+.box1:hover .icon1 {
+  color: #64B5F5;
+}
+/* #/////////...ICON...////////////// */
+
+.icon1 {
+  background-color: #64B5F5; 
+  color: white; 
+  border-radius: 50%; 
+  width: 40px; 
+  height: 40px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.icon2 {
+  background-color: #64B5F5; 
+  color: #000; 
+  border-radius: 50%; 
+  width: 100px; 
+  height: auto; 
+  padding: 30px;
+  margin: auto;
+  margin-top: 95% !important;
+
+}
+
+.icon3 {
+  background-color: rgb(241, 67, 67); 
+  color: #000; 
+  border-radius: 50%; 
+  width: 100px; 
+  height: auto; 
+  padding: 30px;
+  margin: auto;
+}
+
+.icon4 {
+  background-color: rgb(95, 250, 95); 
+  color: #000; 
+  border-radius: 50%; 
+  width: 100px; 
+  height: auto; 
+  padding: 30px;
+  margin: auto;
+  margin-top: 95% !important;
+}
+
+.love{
+  color: #64B5F5;
+}
+
+/* #/////////////////////////////////////////// */
+.testimonial-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 500px;
+  margin: auto;
+}
+
+.testimonial-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+  border: 3px solid #f8f9fa;
+}
+
+.testimonial-stars {
+  color: #64B5F5;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  margin-top: 5px;
+  color: #333;
+}
+
+/* get_involved */
+.body-involved {  
+  background-color: #f8f9fa;  
+}  
+.hero-involved {  
+  background: url('../static/images2/hero--involved.png') no-repeat center center;  
+  background-size: cover;  
+  height: 400px;  
+  color: white;  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+  text-align: center;  
+}  
+.accordion-button:not(.collapsed) {  
+  color: #0d6efd;  
+  background-color: #e7f1ff;  
+}  
+
+
+/* donate_include start*/
+.donate-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.donate-process img {
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.donate-steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.donate-steps .step {
+  margin-bottom: 20px;
+}
+
+.donate-steps .step h5 {
+  font-weight: bold;
+}
+
+.donate-steps .step i {
+  font-size: 40px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.donation-form {
+
+  background-color: #f9fafb;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.donation-link {
+  background-color: #e9ecef;
+  padding: 8px;
+  text-align: center;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+.donation-link input {
+  width: 90%;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.donation-link input:focus {
+  box-shadow: none;
+}
+
+
+.donationn{
+  background-image: url('../static/images2/image-222.png') !important; /* Replace with your image URL */  
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;  
+}
+/* donate_include end*/
+
+/* volunteer_include start*/
+.body-volunteer {  
+  background-color: #f8f9fa;  
+}  
+.hero-volunteer {  
+  background-color: #343a40;  
+  color: white;  
+  padding: 50px 0;  
+}  
+
+.volunteer-form{
+  background-image: url('../static/images2/image-444.png') !important; 
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;  
+}
+
+
+/* volunteer_include end*/
+
+/* volunteer................. */
+.vsignup1body {
+  background-color: #f9fbfd;
+  font-family: Arial, sans-serif;
+  background-image: url('path-to-your-background-image.jpg'); /* Replace with actual image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.formm {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 2rem;
+}
+.stepper {
+  list-style: none;
+  padding: 0;
+}
+.stepper li {
+  margin-bottom: 1rem;
+}
+.stepper li.active .step-number {
+  background-color: #007bff;
+  color: white;
+}
+.stepper .step-number {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+.stepper .step-label {
+  font-size: 1rem;
+}
+.info-icon {
+  color: #17a2b8;
+  margin-right: 5px;
+}
+.btn-verify {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.left-bg{
+    background-color: #a4caee !important;
+  }
+  
+  
+
+
+
+/* partner_include start*/
+.body-partner {  
+  background-color: #f8f9fa;  
+}  
+
+
+.contact-form {  
+  background: white;  
+  padding: 20px;  
+  border-radius: 10px;  
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+}  
+
+/* partner_include end*/
+
+/* building hospital start*/
+.info-box {
+  text-align: center;
+}
+.donation-link {
+  margin-top: 30px;
+}
+.donation-input {
+  width: 100%;
+}
+.hospital-img {
+  max-height: 150px;
+  max-width: 100%;
+}
+/* building hospital end */
+
+.train{
+  position: relative;
+  height:22rem !important;
+}
+
+.train1{
+  width: 65% !important;
+  position: relative;
+}
+
+.train2{
+  width: 120px !important;
+  position: absolute;
+  top: 6.5rem;
+  right: 4.5rem;
+}
+
+.ttrain2{
+  width: 120px !important;
+  position: absolute;
+  top: 3rem;
+  left: 9rem;
+}
+
+.ttrain3{
+  width: 120px !important;
+  position: absolute;
+  top: 6.5rem;
+  right: 4.9rem;
+}
+
+
+
+/* about_us */
+
+.foot li a{
+  text-decoration: none;
+
+}
+
+.foot ul li a{
+  color: gray;
+
+}
+
+.section-title {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #64B5F5;
+}
+
+.card-custom {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* about_us end */
+
+
+.account .small{
+  color: #000 !important;
+  font-weight: 600;
+}
+
+/* projects start */
+
+.project-header {
+  background-image: url('/static/images2/Frame 447pro.png');
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  padding-top: 80px ;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  box-sizing: border-box !important;
+}
+
+
+.project-header h1 {
+  font-size: 3rem;
+}
+
+
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* Introduction Section */
+#intro {
+  padding: 60px 0;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.intro-stats {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Our Products Section */
+#products {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.product-list button {
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  width: 100%;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  background-color: #e9ecef;
+  color: #007bff;
+  border: none;
+}
+
+.product-list button:hover {
+  background-color: #d0e8ff;
+}
+
+.project-right{
+  background-image: url('../static/images2/Frame\ 433.png'); /* Replace with your image URL */  
+  background-size: cover;  
+  background-position: center;  
+  height: 80vh; /* Adjust height as needed */  
+  color: #fff !important;
+}
+
+.projectt{
+  opacity: 0.9;  /* Set transparency level */  
+  margin-top: 25rem !important;
+  margin-right: 15px !important;
+  color: #000;
+  /* padding: 0 10px; */
+  border-radius: 10px;
+  
+}
+
+.projectt2{
+  opacity: 0.9;  /* Set transparency level */  
+  background-color: #f7f0f0;
+  color: #000;
+  padding: 0 10px;
+  border: 1px solid #dad6d6;
+  border-radius: 10px;
+  /* width: 100px !important; */
+}
+
+.intro-stats{
+  margin-top: 16.5rem !important;
+  box-sizing: border-box;
+ 
+}
+
+
+/* contact...section */
+
+.sendit{
+  background-color: #64B5F5 !important;  
+    color: white !important;  
+    border: none !important;  
+    padding: 10px !important;  
+    border-radius: 4px !important;  
+    cursor: pointer !important;  
+    width: 30% !important;  
+}  
+
+
+
+.contact-section {
+  background-image: linear-gradient(
+    rgba(26, 28, 43, 0.6),
+    rgba(26, 28, 43, 0.5)
+  ), url('/static/images/contact_us.jpg') !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 80px 0;
+  color: white;
+}
+
+.contact-section .contact-info {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.contact-section p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.contact-info a {
+  color: #64B5F5;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.form-control {
+  background-color: rgba(255, 255, 255, 0.85);
+  border: none;
+  color: #333;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #64B5F5;
+}
+
+.btn-primary {
+  background-color: #64B5F5;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #64B5F5;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+      padding: 40px 0;
+  }
+
+  .contact-section h2 {
+      font-size: 2rem;
+  }
+
+  .contact-section p {
+      font-size: 1rem;
+  }
+
+  .contact-info {
+      margin-bottom: 40px;
+  }
+}
+
+/* contact...section end*/
+
+/* donation section start */
+/* ....................................................................... */
+
+
+/* ............................................................................. */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  
+}
+
+.ddonate{
+  height: 450px !important;
+}
+
+/* .form-container {
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+} */
+
+label {
+  font-weight: bold;
+}
+
+.form-section {
+  padding: 2rem 0;
+}
+
+
+
+.submit-btn:hover {
+  background-color: #004080;
+}
+
+.info-section {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.page-footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  background-color: #343a40;
+  color: white;
+  margin-top: 3rem;
+}
+
+/* Custom style for input borders */
+input[type="text"],
+input[type="password"],
+input[type="url"],
+input[type="email"],
+input[type="tel"] {
+  border: none;
+  border-bottom: 1px solid gray; 
+  /* border-radius: 0; */
+  outline: none;
+}
+
+input[type="text"]:focus,
+input[type="url"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+  box-shadow: none;
+  border-bottom-color: #004080;
+}
+/* donation section end */
+
+/* emergency starts */
+ /* Custom styles */
+
+.em_header {
+  text-align: center;
+  /* padding: 50px 20px; */
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-image: url('../static/images2/Emergemcy\ hero\ section.png');
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center; 
+}
+.em_header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+
+.em1{
+  background-image: url('../static/images2/Emergency\ blue\ bg.png'); /* Replace with the actual background image URL */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  margin: 0;
+}
+
+.em2{
+  background-image: url('../static/images2/Emergency\ blue\ bg\ 2nd\ side.png'); /* Replace with the actual background image URL */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  margin: 0;
+}
+
+.em_contact{
+  background-color: red;
+  color: #fff;
+}
+
+.service-icon {
+  font-size: 3rem;
+  color: #007bff;
+}
+.cta-section {
+  background-color: #badafc;
+  color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.em_pix{
+  width: 30rem;
+  height: auto;
+}
+
+/* cholera start */
+
+.hero {
+  background: url('../static/images2/Emergemcy\ hero\ section.png') no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.nav .nav-link.activee {
+  color: #fff;
+}
+
+.nav .nav-link {
+  color: #fff;
+}
+
+.nav .nav-link:hover {
+  background-color: #007bff;
+  color: #fff !important;
+  border-radius: 3px;
+}
+
+.nav .nav-link:hover{
+  color: #fff;
+  
+}
+
+.cardcholera img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.partner-logos img {
+  max-width: 150px;
+  height: auto;
+  margin: 10px;
+}
+
+/* cholera end */
+
+
+
+
+/* emergency ends */
+
+
+
+
+
+.circle-img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.red{
+    
+  border:5px solid red !important; /* Change the color as needed */  
+  border-radius:50%; /* Makes the image circular */  
+  /* You can adjust width and height if necessary */  
+
+}
+
+.blue{
+    
+  border:4px solid blue !important; /* Change the color as needed */  
+  border-radius:50%; /* Makes the image circular */  
+  /* You can adjust width and height if necessary */  
+
+}
+
+.yellow{
+    
+  border:5px solid yellow !important; /* Change the color as needed */  
+  border-radius:50%; /* Makes the image circular */  
+  /* You can adjust width and height if necessary */  
+
+}
+
+.green{
+    
+  border:5px solid green !important; /* Change the color as needed */  
+  border-radius:50%; /* Makes the image circular */  
+  /* You can adjust width and height if necessary */  
+
+}
+
+.cyan{
+    
+  border:5px solid #64B5F5 !important; /* Change the color as needed */  
+  border-radius:50%; /* Makes the image circular */  
+  /* You can adjust width and height if necessary */  
+
+}
+.podcast-box {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+}
+.podcast-box img {
+  border-radius: 10px;
+}
+.category-btn {
+  border-radius: 20px;
+  margin-right: 10px;
+}
+.newsletter-section {
+  background-color: #f0f8ff;
+  padding: 40px 20px;
+  border-radius: 10px;
+}
+.newsletter-section input {
+  border-radius: 20px;
+  padding: 15px;
+}
+
+.podcast-img{
+  width: 80% !important;
+}
+
+.podcast-host{
+  width: 500px !important;
+  height: 600px !important;
+}
+
+.category-btn:hover{
+  background: #64B5F5 !important;
+  border: none !important;
+}
+
+.btn-sub{
+  border-radius: 10px !important;
+  
+  background-color: #64B5F5 !important;
+  color: #fff !important;
+  border: 1px solid #64B5F5 !important;
+
+}
+
+
+/* podcast end */
+/* ..............virtualcare section start1............ */
+.signup_body {
+  background-image: url('../static/images2/sign\ up\ for\ patient\ image.png'); /* Replace with the actual background image URL */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+.signin_body {
+  background-image: url('../static/images2/login\ images\ 1.png'); /* Replace with the actual background image URL */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.form-container_sign {
+  background-color: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  margin-left: 22rem;
+}
+
+.form-container h2 {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.social-login {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.social-login button {
+  flex: 1;
+}
+
+.or-divider {
+  text-align: center;
+  margin: 1rem 0;
+  font-weight: bold;
+  color: #6c757d;
+}
+
+.signup_btn {
+  width: 50%;
+  padding: 5px;
+  display: block;
+  border-radius: 9px !important;
+  border: none !important;
+  margin: 0 auto;
+}
+
+/* Media Query for Tablets and Mobile Screens */
+@media (max-width: 768px) {
+  .form-container {
+    max-width: 90%;
+    margin: 0; /* Center the form */
+    padding: 1.5rem;
+  }
+
+  .signup_body {
+    background-size: cover; /* Adjust background to cover on mobile */
+  }
+}
+
+/* Media Query for Small Mobile Screens */
+@media (max-width: 576px) {
+  .form-container {
+    max-width: 100%;
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .social-login button {
+    width: 100%; /* Full-width social login buttons on small screens */
+    margin-bottom: 0.5rem;
+  }
+
+  .signup_btn {
+    width: 100%; /* Full-width submit button on small screens */
+    padding: 8px;
+  }
+}
+
+
+/* our services section  */
+.hero-section-services {
+  
+  background-image: linear-gradient(
+    rgba(26, 28, 43, 0.6),
+    rgba(26, 28, 43, 0.5)
+  ), url('../static/images2/hero\ image\ for\ our\ service\ page.png') !important;
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 70vh;
+  width: 100% !important;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+
+.service-card {
+  border: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.service-card:hover {
+  transform: scale(1.05);
+}
+
+.services2{
+  margin-top: 20rem !important;
+}
+
+.service_img{
+  background-image: url('../static/images2/serviceee.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;  
+  height: 60vh;
+}
+
+
+.card_service  img{
+  position: absolute;
+  top: -3rem !important;
+  right: 9rem;
+  
+}
+
+.service-in{
+  top: 28rem; 
+  position: absolute;
+  
+}
+
+/* For devices with a max width of 768px (Tablets and smaller screens) */  
+@media (max-width: 768px) {  
+  
+  .hero-section-services {  
+    min-height: 60vh; /* Reduce the hero section height */  
+    padding: 20px; /* Add some padding if needed */  
+  }  
+
+  .service-card {  
+    margin-bottom: 20px; /* Add space between cards */  
+  }  
+
+  .service_card img {  
+    position: static; /* Reset img positioning */  
+    top: 0; /* Reset to avoid overflow */  
+    right: 0; /* Reset to avoid overflow */  
+    width: 100%; /* Make images responsive */  
+    height: auto; /* Keep aspect ratio */  
+  }  
+
+  .services2 {  
+    margin-top: 10rem !important; /* Adjust margin for better spacing */  
+  }  
+
+  .service_img {  
+    height: auto; /* Allow height to be dynamic */  
+    padding: 20px; /* Add some padding */  
+  }  
+
+  .service-in {  
+    top: 20rem; /* Adjust the overlay positioning */  
+    position: relative; /* Change to relative for better flow in layout */  
+  }  
+
+  h5.display-5 {  
+    font-size: 1.5rem; /* Adjust font size for headings */  
+  }  
+
+  p.display-7 {  
+    font-size: 1rem; /* Adjust font size for paragraph */  
+  }  
+}  
+
+/* For devices with a max width of 576px (Mobile phones) */  
+@media (max-width: 576px) {  
+  
+  .hero-section-services {  
+    min-height: 50vh; /* Further reduce height in mobile */  
+  }  
+
+  .service-card {  
+    padding: 10px; /* Additional padding for cards */  
+  }  
+
+  .service_card img {  
+    width: 80%; /* Make images smaller */  
+    margin: auto; /* Center images */  
+  }  
+
+  .services2 {  
+    margin-top: 5rem !important; /* Further adjust margin for small screens */  
+  }  
+
+  h5.display-5 {  
+    font-size: 1.3rem; /* Continue to scale down font size */  
+  }  
+
+  p.display-7 {  
+    font-size: 0.9rem; /* Decrease size for better readability */  
+  }  
+}
+
+
+
+
+
+
+
+
+
+
+/* v_personal section  */
+.form-container_personal {  
+  background-color: white;  
+  border-radius: 10px;  
+  padding: 30px;  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+  max-width: 800px;  
+  margin: auto;  
+  margin-top: 50px;  
+  display: flex;  
+}  
+.steps {  
+  flex: 1;  
+  padding-right: 20px;  
+}  
+.step {  
+  font-size: 1.2em;  
+  margin-bottom: 20px;  
+  padding: 10px;  
+  border-radius: 5px;  
+}  
+/* .step.active {  
+  background-color: #e7f1ff;  
+  color: #007bff;  
+}   */
+
+.step.active {
+  color: #64B5F5;;
+}
+
+.step-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #64B5F5;
+  color: white;
+  border-radius: 50%;
+  line-height: 50px;
+  margin: auto;
+  padding: 4px 10px;
+  text-align: center;
+} 
+
+.step-circle1 {
+  width: 40px;
+  height: 40px;
+  background-color: gray;
+  color: white;
+  border-radius: 50%;
+  line-height: 50px;
+  margin: auto;
+  padding: 4px 10px;
+  text-align: center;
+  
+}
+
+
+.form-fields {  
+  flex: 2;  
+}  
+.form-label {  
+  font-weight: bold;  
+}  
+.row {  
+  display: flex;   
+  justify-content: space-between; /* Adjust spacing as necessary */  
+}  
+.col {  
+  flex: 1; /* Flexbox distributes space evenly */  
+  margin-right: 10px; /* Optional: add space between columns */  
+}  
+.col:last-child {  
+  margin-right: 0; /* Remove right margin from the last column in a row */  
+}
+
+/* ..............virtualcare section end1............ */
+.main-heading {
+  font-weight: 700;
+}
+
+.subheading {
+  color: #707070;
+  margin-bottom: 2rem;
+}
+
+.appointment-btn {
+  background-color: #64B5F5;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  text-decoration: none;
+}
+
+.doctor-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 2rem;
+  transition: transform 0.3s;  
+  overflow: hidden;  
+  
+}
+
+.doctor-images img {
+  width: 200px;
+  height: auto;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+
+.doctor-image-1:hover {  
+  transform: scale(1.05);  
+  transition: transform 0.3s ;
+}  
+
+.doctor-image-2:hover {  
+  transform: scale(1.05);  
+  transition: transform 0.3s ;
+}  
+
+.doctor-image-3:hover {  
+  transform: scale(1.05);  
+  transition: transform 0.3s ;
+}  
+/* 
+.doctor-images:hover img {  
+  transform: scale(1.1);
+}  */
+
+.doctor-image-1 {
+  position: relative;
+  z-index: 1;
+  transform: rotate(-10deg);
+  height: 250px !important ;
+}
+
+
+.doctor-image-2 {
+  position: relative;
+  z-index: 2;
+  height: 300px !important ;
+  margin-left: -50px;
+}
+
+.doctor-image-3 {
+  position: relative;
+  z-index: 1;
+  transform: rotate(10deg);
+  height: 250px !important ;
+
+  margin-left: -50px;
+}
+
+.doc-hero{  
+  background-image: linear-gradient(
+    rgba(26, 28, 43, 0.6),
+    rgba(26, 28, 43, 0.5)
+  ), url('../static/images2/Doctor\ homepage\ hero\ image.png') !important;
+  /* background: url('../static/images2/Doctor\ homepage\ hero\ image.png') no-repeat center center;   */
+  background-size: cover;  
+  height: 80vh;  
+  color: white;  
+}
+
+.reach-section {  
+  background-image: linear-gradient(
+    rgba(26, 28, 43, 0.6),
+    rgba(26, 28, 43, 0.5)
+  ), url('../static/images2/Reach\ your\ patient\ easily\ image.png') !important;
+  background-size: cover;  
+
+  background: #f8f9fa;  
+  padding: 50px 0;  
+  height: 70vh;
+} 
+
+
+.reach2{
+  padding-top: 10rem;
+  box-sizing: border-box !important;
+}
+
+
+.d-hero-section {  
+  display: flex;  
+  align-items: center;  
+  justify-content: space-between;  
+  padding: 50px;  
+  background: linear-gradient(to right, #f0f4ff, #e0e7ff);  
+}  
+
+
+/* doctors flow when logged in  */
+
+.doc_s1 {
+  max-width: 900px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.d-form-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+
+
+
+/* .d-text-container {  
+  max-width: 600px;  
+}   */
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .doctor-images {
+      flex-direction: column;
+  }
+
+  .doctor-image-1, .doctor-image-2, .doctor-image-3 {
+      transform: none;
+      margin-left: 0;
+  }
+
+  .doctor-images img {
+      margin-bottom: 1rem;
+  }
+}
+
+
+
+
+/* ..............virtualcare section end2............ */
+
+/* patients landing page */
+
+/* telemed-landing */
+ /* Custom styles for the doctor cards */
+ .doctor-card {
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+.doctor-card:hover {
+  transform: scale(1.02);
+}
+
+.doctor-card img{
+  width: 50% !important;
+  
+}
+
+.doctor-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+ 
+.doctor-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+.doctor-specialty {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+.rating {
+  color: #ffc107;
+  font-size: 14px;
+}
+
+.search-btn{
+  background-color: #64B5F5;
+  color: #fff;
+  border: 1px solid #64B5F5 !important;
+  padding: 6px;
+  border-radius: 3px;
+  margin-left: -25rem;
+}
+
+.tele-right{
+  margin-top: 18rem !important;
+
+}
+/* Doctor Cards Section */
+      .doctor-cardd {  
+        margin-bottom: 20px;  
+    }  
+    .doctor-cardd img {  
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        
+        /* Makes the image circular */  
+    }  
+    .ratingg {  
+        color: gold;  
+    }  
+    .contact-sectionn {  
+        margin-top: 20px;  
+    }  
+
+    .doc2{
+      padding-top: 100px;
+    }
+
+    .doc3{
+      padding-top: 250px;
+
+
+    }
+
+    .doc4{
+      padding-top:100px;
+
+    }
+
+    .doctor-cards-section{
+      box-sizing: border-box !important;
+    }
+ 
+    .hero-imagee{
+      background-image: url('/static/images2/image-11.png');
+
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;  
+      padding: 150px 0px !important; 
+      color: white;
+      width: 800px;
+      height: 400px;
+      display: flex;
+      text-align: center;
+      
+    }
+    
+/* patients landing page end */
+
+.gg{
+  background-color: #858484;
+  color: #fff;
+  width: 38px;
+}
+
+/* patient sectionnnnnnn */
+.services {  
+  background-color: #64B5F5;  
+  color: white;  
+  padding: 40px 0;  
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  
+}  
+.service-card {  
+  color: #fff;  
+  border-radius: 10px;  
+  padding: 20px;  
+  text-align: center;  
+}  
+
+/* This is the bot side */
+.arrow {
+  position: fixed;
+  color: white;
+  border-radius: 50px;
+  height: 50px;
+  bottom: 40px;
+  right: 50px;
+  text-decoration: none;
+  align-items: center;
+  line-height: 50px;
+}
+
+
+
+.fa-star{
+  color: gold !important;
+}
