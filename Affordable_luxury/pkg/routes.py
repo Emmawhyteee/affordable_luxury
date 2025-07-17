@@ -241,7 +241,7 @@ def delete_item(id):
     try:
         session.modified = True
         for key, item in session['Shoppingcart'].items():
-            if int(key)==id:
+            if int(key)==id:                                                                                                                                                                                                                                                                                
                 session['Shoppingcart'].pop(key,None)
                 return redirect(url_for('cart'))
     except Exception as e:
